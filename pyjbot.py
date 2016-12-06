@@ -209,7 +209,16 @@ def my_action(request):
     print('Received from user...', request['text'])
 
 
-
+#works fine so far. Can't run from wit.ai
+def get_cooking():
+    print("Inside grocery")
+    global site
+    context = ""
+    cook = foodSites()
+    cook.initList()
+    context= cook.getIngred()
+    site = cook.getSites()
+    return context
 
     
 
