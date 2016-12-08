@@ -121,7 +121,7 @@ def handle_messages():
           send_message(PAT, sender, site) 
           
         elif resp[u'value'] == "beef":
-          message = get_cooking()
+          message = get_cookingspec("beef")
           while( len(message) > 300):
             msg2 = message[:300]
             message = message[300:]
@@ -130,7 +130,7 @@ def handle_messages():
           send_message(PAT, sender, site)
           
         elif resp[u'value'] == "chicken":
-          message = get_cooking()
+          message = get_cookingspec("chicken")
           while( len(message) > 300):
             msg2 = message[:300]
             message = message[300:]
@@ -139,7 +139,7 @@ def handle_messages():
           send_message(PAT, sender, site)
           
         elif resp[u'value'] == "pasta":
-          message = get_cooking()
+          message = get_cookingspec("pasta")
           while( len(message) > 300):
             msg2 = message[:300]
             message = message[300:]
@@ -148,7 +148,7 @@ def handle_messages():
           send_message(PAT, sender, site)
           
         elif resp[u'value'] == "pork":
-          message = get_cooking()
+          message = get_cookingspec("pork")
           while( len(message) > 300):
             msg2 = message[:300]
             message = message[300:]
@@ -261,7 +261,7 @@ def get_cookingspec(item):
     global site
     context = ""
     cook = foodSites()
-    cook.initList()
+    cook.initList(item)
     context= cook.getIngred()
     site = cook.getSites()
     return context
