@@ -129,33 +129,43 @@ def handle_messages():
               message = message[300:]
               send_message(PAT, sender, msg2)
             send_message(PAT, sender, message)
-            send_message(PAT, sender, site)
+            
+          send_message(PAT, sender, site)
           
         elif resp[u'value'] == "chicken":
           message = get_cookingspec("chicken")
-          while( len(message) > 300):
-            msg2 = message[:300]
-            message = message[300:]
-            send_message(PAT, sender, msg2)
-          send_message(PAT, sender, message)
+          text1 = message1.splitlines()
+          for message in text1:
+            while( len(message) > 300):
+              msg2 = message[:300]
+              message = message[300:]
+              send_message(PAT, sender, msg2)
+            send_message(PAT, sender, message)
+            
           send_message(PAT, sender, site)
           
         elif resp[u'value'] == "pasta":
           message = get_cookingspec("pasta")
-          while( len(message) > 300):
-            msg2 = message[:300]
-            message = message[300:]
-            send_message(PAT, sender, msg2)
-          send_message(PAT, sender, message)
+          text1 = message1.splitlines()
+          for message in text1:
+            while( len(message) > 300):
+              msg2 = message[:300]
+              message = message[300:]
+              send_message(PAT, sender, msg2)
+            send_message(PAT, sender, message)
+            
           send_message(PAT, sender, site)
           
         elif resp[u'value'] == "pork":
           message = get_cookingspec("pork")
-          while( len(message) > 300):
-            msg2 = message[:300]
-            message = message[300:]
-            send_message(PAT, sender, msg2)
-          send_message(PAT, sender, message)
+          text1 = message1.splitlines()
+          for message in text1:
+            while( len(message) > 300):
+              msg2 = message[:300]
+              message = message[300:]
+              send_message(PAT, sender, msg2)
+            send_message(PAT, sender, message)
+            
           send_message(PAT, sender, site)
             
         #greetings response. Usually used to start up
