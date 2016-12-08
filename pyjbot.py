@@ -133,7 +133,7 @@ def handle_messages():
           send_message(PAT, sender, site)
           
         elif resp[u'value'] == "chicken":
-          message = get_cookingspec("chicken")
+          message1 = get_cookingspec("chicken")
           text1 = message1.splitlines()
           for message in text1:
             while( len(message) > 300):
@@ -145,7 +145,7 @@ def handle_messages():
           send_message(PAT, sender, site)
           
         elif resp[u'value'] == "pasta":
-          message = get_cookingspec("pasta")
+          message1 = get_cookingspec("pasta")
           text1 = message1.splitlines()
           for message in text1:
             while( len(message) > 300):
@@ -157,7 +157,7 @@ def handle_messages():
           send_message(PAT, sender, site)
           
         elif resp[u'value'] == "pork":
-          message = get_cookingspec("pork")
+          message1 = get_cookingspec("pork")
           text1 = message1.splitlines()
           for message in text1:
             while( len(message) > 300):
