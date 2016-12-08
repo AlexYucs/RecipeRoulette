@@ -46,7 +46,16 @@ class foodSites:
         global ingstr
         global linklist
         print ("var  "+str(uuu))
-        link1 = "http://allrecipes.com/recipes/446/main-dish/"+ str(uuu) +"/"
+        if (str(uuu) == "chicken")
+            link1 = "http://allrecipes.com/recipes/16954/main-dish/chicken/"
+        else if  (str(uuu) == "pasta")
+            link1 = "http://allrecipes.com/recipes/17245/main-dish/pasta/"
+        else if (str(uuu) == "pork")
+            link1 = "http://allrecipes.com/recipes/673/main-dish/pasta/"
+        else
+            link1 = "http://allrecipes.com/recipes/446/main-dish/beef/"
+            
+        #link1 = "http://allrecipes.com/recipes/446/main-dish/beef/"
         #link2 = "http://allrecipes.com/recipes/16954/main-dish/chicken/"
         #link3 = "http://allrecipes.com/recipes/17245/main-dish/pasta/"
         
