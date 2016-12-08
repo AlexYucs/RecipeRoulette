@@ -250,7 +250,7 @@ def get_cooking():
     global site
     context = ""
     cook = foodSites()
-    cook.initList()
+    cook.initList("beef")
     context= cook.getIngred()
     site = cook.getSites()
     return context
@@ -261,7 +261,7 @@ def get_cookingspec(item):
     global site
     context = ""
     cook = foodSites()
-    cook.initListspec(item)
+    cook.initList(item)
     context= cook.getIngred()
     site = cook.getSites()
     return context
