@@ -62,6 +62,28 @@ class foodSites:
 
         print(ingstr)
 
+    def initListspec(self,uuu):
+        global ingstr
+        global linklist
+        link1 = "http://allrecipes.com/recipes/446/main-dish/"+ uuu +"/"
+        #link2 = "http://allrecipes.com/recipes/16954/main-dish/chicken/"
+        #link3 = "http://allrecipes.com/recipes/17245/main-dish/pasta/"
+        
+        chosen = self.findLink(link1)
+        ingstr = "Ingredients: \n"+self.ingredList(chosen)
+        linklist = "http://allrecipes.com" + chosen + "\n"
+
+        #chosen = self.findLink(link2)
+        #ingstr = ingstr + self.ingredList(chosen)
+        #linklist = linklist + "http://allrecipes.com" + chosen + "\n"
+
+        #chosen = self.findLink(link3)
+        #ingstr = ingstr + self.ingredList(chosen)
+        #linklist = linklist + "http://allrecipes.com" + chosen + "\n"
+
+        print(ingstr)
+        
+        
     #return ingredient list
     def getIngred(self):
         global ingstr
