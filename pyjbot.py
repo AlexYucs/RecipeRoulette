@@ -120,6 +120,41 @@ def handle_messages():
           send_message(PAT, sender, message)
           send_message(PAT, sender, site) 
           
+        elif resp[u'value'] == "beef":
+          message = get_cooking()
+          while( len(message) > 300):
+            msg2 = message[:300]
+            message = message[300:]
+            send_message(PAT, sender, msg2)
+          send_message(PAT, sender, message)
+          send_message(PAT, sender, site)
+          
+        elif resp[u'value'] == "chicken":
+          message = get_cooking()
+          while( len(message) > 300):
+            msg2 = message[:300]
+            message = message[300:]
+            send_message(PAT, sender, msg2)
+          send_message(PAT, sender, message)
+          send_message(PAT, sender, site)
+          
+        elif resp[u'value'] == "pasta":
+          message = get_cooking()
+          while( len(message) > 300):
+            msg2 = message[:300]
+            message = message[300:]
+            send_message(PAT, sender, msg2)
+          send_message(PAT, sender, message)
+          send_message(PAT, sender, site)
+          
+        elif resp[u'value'] == "pork":
+          message = get_cooking()
+          while( len(message) > 300):
+            msg2 = message[:300]
+            message = message[300:]
+            send_message(PAT, sender, msg2)
+          send_message(PAT, sender, message)
+          send_message(PAT, sender, site)
             
         #greetings response. Usually used to start up
         elif resp[u'value'] == "greetings":
@@ -220,7 +255,16 @@ def get_cooking():
     site = cook.getSites()
     return context
 
-    
+#works fine so far. Can't run from wit.ai
+def get_cookingspec(item):
+    print("Inside grocery")
+    global site
+    context = ""
+    cook = foodSites()
+    cook.initList()
+    context= cook.getIngred()
+    site = cook.getSites()
+    return context
 
   
   
