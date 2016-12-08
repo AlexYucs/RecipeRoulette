@@ -65,6 +65,7 @@ class foodSites:
     def initListspec(self,uuu):
         global ingstr
         global linklist
+        print ("var  "+str(uuu))
         link1 = "http://allrecipes.com/recipes/446/main-dish/"+ str(uuu) +"/"
         #link2 = "http://allrecipes.com/recipes/16954/main-dish/chicken/"
         #link3 = "http://allrecipes.com/recipes/17245/main-dish/pasta/"
