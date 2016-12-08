@@ -51,7 +51,7 @@ class foodSites:
         elif  (str(uuu) == "pasta") :
             link1 = "http://allrecipes.com/recipes/17245/main-dish/pasta/"
         elif (str(uuu) == "pork") :
-            link1 = "http://allrecipes.com/recipes/673/main-dish/pasta/"
+            link1 = "http://allrecipes.com/recipes/673/main-dish/pork/"
         else:
             link1 = "http://allrecipes.com/recipes/446/main-dish/beef/"
             
