@@ -257,7 +257,7 @@ def get_cooking():
 
 #works fine so far. Can't run from wit.ai
 def get_cookingspec(item):
-    print("Inside grocery")
+    print("Inside grocery spec "+item)
     global site
     context = ""
     cook = foodSites()
