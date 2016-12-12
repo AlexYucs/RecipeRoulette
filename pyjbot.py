@@ -111,16 +111,16 @@ def handle_messages():
       if u'value' in resp:
         
         #grocery response to get list of groceries. From imported class
-        if resp[u'value'] == "grocery":
-          message = get_cooking()
-          while( len(message) > 300):
-            msg2 = message[:300]
-            message = message[300:]
-            send_message(PAT, sender, msg2)
-          send_message(PAT, sender, message)
-          send_message(PAT, sender, site) 
+       # if resp[u'value'] == "grocery":
+       #   message = get_cooking()
+        #  while( len(message) > 300):
+        #    msg2 = message[:300]
+        #    message = message[300:]
+        #    send_message(PAT, sender, msg2)
+        #  send_message(PAT, sender, message)
+        #  send_message(PAT, sender, site) 
           
-        elif resp[u'value'] == "beef":
+        if resp[u'value'] == "beef":
           message1 = get_cookingspec("beef")
           text1 = message1.splitlines()
           for message in text1:
